@@ -1,5 +1,8 @@
 #!/usr/bin/python3
 
+# Usage: python3 jenk_exec.py -i 10.0.0.11:8080 -c "uname -a"
+# TODO: [!] Fix >> No valid crumb was included in the request
+
 import os, sys, argparse, requests, re
 from lxml.html import fromstring
 requests.packages.urllib3.disable_warnings()
