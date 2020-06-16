@@ -13,7 +13,6 @@ parser.add_argument('-t', dest="threads", required=False, type=int, default=16, 
 
 args = parser.parse_args()
 
-
 def check_hosts(hosts, threads):
     def fetch(host):
         try:
@@ -41,11 +40,9 @@ def check_hosts(hosts, threads):
         pool.spawn(fetch, host)
     pool.join()
 
-
 #def check_dir(outdir):
     #if not os.path.isdir(outdir):
         #os.mkdir(outdir)
-
 
 if __name__ == "__main__":
     filename = args.hosts
